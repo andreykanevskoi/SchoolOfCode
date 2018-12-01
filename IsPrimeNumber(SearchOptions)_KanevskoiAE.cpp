@@ -1,7 +1,7 @@
 /*
-Алгоритм определения "Является ли число простым?"
-(Метод перебора)
-Каневской Андрей
+Is prime number?
+(Method of searching of options)
+Kanevskoi Andrey
 01.12.2018
 */
 #include<iostream>
@@ -10,12 +10,12 @@ int main()
 {
 	int nInputNumber = 0; 
 	cin >> nInputNumber;
-	bool IsPrimeNumber = true;	//является ли число простым
+	bool IsPrimeNumber = true;	// number's state
 	if (nInputNumber < 2)
 		IsPrimeNumber = false;
-	for (int i = 2; i < sqrt(nInputNumber) && IsPrimeNumber; i++)
+	for (int i = 2; i < sqrt(nInputNumber) && IsPrimeNumber; i++)	
 		if (nInputNumber % i == 0)
-			IsPrimeNumber = false;
+			IsPrimeNumber = false;	//change state
 	if (IsPrimeNumber)
 		cout << "This number is prime!" << endl;
 	else
