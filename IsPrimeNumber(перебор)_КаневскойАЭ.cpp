@@ -1,7 +1,7 @@
 /*
-Алгоритм определения "Является ли число простым?"
-(Метод перебора)
-Каневской Андрей
+РђР»РіРѕСЂРёС‚Рј РѕРїСЂРµРґРµР»РµРЅРёСЏ "РЇРІР»СЏРµС‚СЃСЏ Р»Рё С‡РёСЃР»Рѕ РїСЂРѕСЃС‚С‹Рј?"
+(РњРµС‚РѕРґ РїРµСЂРµР±РѕСЂР°)
+РљР°РЅРµРІСЃРєРѕР№ РђРЅРґСЂРµР№
 01.12.2018
 */
 #include<iostream>
@@ -10,7 +10,7 @@ int main()
 {
 	int nInputNumber = 0; 
 	cin >> nInputNumber;
-	bool IsPrimeNumber = true;	//является ли число простым
+	bool IsPrimeNumber = true;	//СЏРІР»СЏРµС‚СЃСЏ Р»Рё С‡РёСЃР»Рѕ РїСЂРѕСЃС‚С‹Рј
 	if (nInputNumber < 2)
 		IsPrimeNumber = false;
 	for (int i = 2; i < sqrt(nInputNumber) && IsPrimeNumber; i++)
