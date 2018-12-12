@@ -6,10 +6,10 @@ using namespace std;
 
 /*
 0 <= N <= 100
-N записей о точках
-вывести пару чисел:
-сумма всех Х
-сумма всех У
+N Р·Р°РїРёСЃРµР№ Рѕ С‚РѕС‡РєР°С…
+РІС‹РІРµСЃС‚Рё РїР°СЂСѓ С‡РёСЃРµР»:
+СЃСѓРјРјР° РІСЃРµС… РҐ
+СЃСѓРјРјР° РІСЃРµС… РЈ
 */
 
 struct Point
@@ -21,24 +21,24 @@ struct Point
 int main()
 {
 	const int N_MAX = 100;
-	Point arrayPoints[100];//массив структур Point
-	fstream inputFile("input.txt", ios::in);//открываем файл
-	if (!inputFile.is_open()) return 0;	//если файл не открыт, завершить программу
-	int quantityPoints = 0;//количество точек во входном файле
-	inputFile >> quantityPoints; //считываем количество точек
-	//считываем в цикле данные о каждой точке
+	Point arrayPoints[100];//РјР°СЃСЃРёРІ СЃС‚СЂСѓРєС‚СѓСЂ Point
+	fstream inputFile("input.txt", ios::in);//РѕС‚РєСЂС‹РІР°РµРј С„Р°Р№Р»
+	if (!inputFile.is_open()) return 0;	//РµСЃР»Рё С„Р°Р№Р» РЅРµ РѕС‚РєСЂС‹С‚, Р·Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ
+	int quantityPoints = 0;//РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕС‡РµРє РІРѕ РІС…РѕРґРЅРѕРј С„Р°Р№Р»Рµ
+	inputFile >> quantityPoints; //СЃС‡РёС‚С‹РІР°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕС‡РµРє
+	//СЃС‡РёС‚С‹РІР°РµРј РІ С†РёРєР»Рµ РґР°РЅРЅС‹Рµ Рѕ РєР°Р¶РґРѕР№ С‚РѕС‡РєРµ
 	for (int i = 0; i < quantityPoints; i++)
 		inputFile >> arrayPoints[i].x >> arrayPoints[i].y;
 	double sumX = 0, sumY = 0;
-	//проходим по всем структурам и считаем сумму
+	//РїСЂРѕС…РѕРґРёРј РїРѕ РІСЃРµРј СЃС‚СЂСѓРєС‚СѓСЂР°Рј Рё СЃС‡РёС‚Р°РµРј СЃСѓРјРјСѓ
 	for (int i = 0; i < quantityPoints; i++)
 	{
 		sumX += arrayPoints[i].x;
 		sumY += arrayPoints[i].y;
 	}
-	fstream outputFile("output.txt", ios::out);	//открываем на запись файл
-	outputFile << sumX << ' ' << sumY;	//записываем в файл квадрат
-	outputFile.close();	//закрываем файл
+	fstream outputFile("output.txt", ios::out);	//РѕС‚РєСЂС‹РІР°РµРј РЅР° Р·Р°РїРёСЃСЊ С„Р°Р№Р»
+	outputFile << sumX << ' ' << sumY;	//Р·Р°РїРёСЃС‹РІР°РµРј РІ С„Р°Р№Р» РєРІР°РґСЂР°С‚
+	outputFile.close();	//Р·Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»
 	return 0;
 }
 
