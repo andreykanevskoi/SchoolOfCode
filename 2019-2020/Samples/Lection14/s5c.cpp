@@ -10,12 +10,15 @@ int main()
 	int i = 0;
 	while (i < input.length())
 	{
+		// пропускаем пробелы
 		while (input[i] == ' ' && i < input.length())
 			i++;
-
+		// если мы не в конце строки
 		if (i != input.length())
-		{
+		{	
+			// считаем новое слово
 			words++;
+			// пропускаем слово по символам
 			while (input[i] != ' ' && i != input.length())
 				i++;
 		}
