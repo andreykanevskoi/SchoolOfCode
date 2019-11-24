@@ -33,7 +33,7 @@ int main() {
 					uniq = false;
 			if (uniq)
 			{
-        // проверяем, простое ли число
+        			// проверяем, простое ли число
 				t = k;
 				bool simple = true;
 				if (t < 2)
